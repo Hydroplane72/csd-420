@@ -1,0 +1,17 @@
+JavaFX Text
+	While I do not use Java professionally, I do use other languages with GUI interfaces, and the text object is the most common UI element. The JavaFX text element is used to display strings to the graphical user interface. Unlike a simple label, however, it is treated as a shape, allowing unique styling and positioning within a scene graph. 
+
+Based on the differences between the Text and the Label. I would stick with Label until someone tells me otherwise or I run into issues with using it. My biggest reason for that decision would be to keep the "text only" portions of my screens as easy to edit as possible for later maintenance. If you switch between Label and Text within the same project, you will probably start having random issues where styling is applied to some text but not all. 
+
+I am choosing Label over Text because Labels are part of the Control and Region hierarchy, meaning they are automatically calculated into padding, borders, and backgrounds. Since Text extends the Shape object rather than the Region, it is considered a non-resizable node. In other words, Labels are easier to resize than Text.
+
+JavaFX Color
+	This object is used to help the UI fill shapes, color text, and display other UI Elements. The Color class is immutable; in other words, once it is created, there is no changing the color that the object represents. There are "transformative" methods, but in reality, they create a new object and return it rather than actually changing the Color object. The reason is that Java likes to cache what it can while running, including Color Objects. Java can then "get" the "black" object much faster than having to think about what "black" actually means.
+
+
+Laying Out a User Interface with JavaFX 2.0. (2018). Oracle.com. https://www.oracle.com/technical-resources/articles/java/layoutfx.html
+‌Text (JavaFX 11). (2018). Openjfx.io. https://openjfx.io/javadoc/11/javafx.graphics/javafx/scene/text/Text.html
+
+Color (JavaFX 23). (2024). Openjfx.io. https://openjfx.io/javadoc/23/javafx.graphics/javafx/scene/paint/Color.html
+‌
+‌
