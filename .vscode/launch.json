@@ -1,0 +1,13 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "java",
+      "name": "Launch App (JavaFX)",
+      "request": "launch",
+      "mainClass": "com.assignment.App",
+      "cwd": "${workspaceFolder}/module-1/Assignment",
+      "vmArgs": "--module-path \"${env:JAVAFX_HOME};${env:JAVAFX_HOME}\\lib\" --add-modules javafx.controls,javafx.fxml"
+    }
+  ]
+}
