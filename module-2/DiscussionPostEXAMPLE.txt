@@ -1,0 +1,48 @@
+import java.util.*;
+
+public class RecursiveSort {
+
+    // Recursively sorts the list in ascending order
+    public static void sort(List<Integer> list) {
+
+        // Base case: a list of size 0 or 1 is already sorted
+        if (list.size() <= 1) {
+            return;
+        }
+
+        // Remove the last element so we can sort the smaller subproblem
+        int last = list.remove(list.size() - 1);
+
+        // Recursively sort the remaining list
+        sort(list);
+
+        // Insert the removed element back into the correct position
+        insert(list, last);
+    }
+
+    // Inserts 'value' into its correct sorted position within the list
+    private static void insert(List<Integer> list, int value) {
+
+        // If list is empty OR the last element is <= value,
+        // then 'value' belongs at the end
+        if (list.isEmpty() || list.get(list.size() - 1) <= value) {
+            list.add(value);
+            return;
+        }
+
+        // Otherwise, temporarily remove the last element
+        int last = list.remove(list.size() - 1);
+
+        // Recursively find the correct place for 'value'
+        insert(list, value);
+
+        // Restore the removed element after insertion is complete
+        list.add(last);
+    }
+
+    public static void main(String[] args) {
+        List<Integer> nums = new ArrayList<>(Arrays.asList(4, 1, 5, 2, 3));
+        sort(nums);
+        System.out.println(nums);
+    }
+}

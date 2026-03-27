@@ -1,0 +1,30 @@
+import java.io.File;
+
+public class DirectoryPrinter {
+
+    // Recursively prints the directory structure starting at 'dir'
+    public static void printDirectory(File dir, String indent) {
+
+        // Base case: if it's not a directory, just print the file name
+        if (!dir.isDirectory()) {
+            System.out.println(indent + dir.getName());
+            return;
+        }
+
+        // Print the directory name
+        System.out.println(indent + "[" + dir.getName() + "]");
+
+        // Recurse into each file/subdirectory
+        File[] files = dir.listFiles();
+        if (files != null) {
+            for (File f : files) {
+                printDirectory(f, indent + "    ");
+            }
+        }
+    }
+
+    public static void main(String[] args) {
+        File root = new File("C:/example/path");
+        printDirectory(root, "");
+    }
+}
