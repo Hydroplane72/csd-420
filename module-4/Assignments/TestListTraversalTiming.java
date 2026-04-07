@@ -32,13 +32,7 @@ Nanoseconds to seconds conversion:
 680373500 nanosecond difference is approximately 0.68 seconds for just 50,000 integers
  */
 
- /*
-Write a test program that stores 50,000 integers in a LinkedList and test the time to traverse the list using an iterator vs. using the get(index) method.
 
-Test your program storing first 50,000 and then 500,000 integers.
-After completing this program and having tested both values, in your comments, explain the results and discuss the time taken using both values and their difference with the get(index) approach.
-Write test code that ensures the code functions correctly.
- */
 public class TestListTraversalTiming {
 
     /**
