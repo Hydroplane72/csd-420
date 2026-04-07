@@ -28,7 +28,7 @@ Iterator traversal time: 0 seconds
 get(index) traversal time: 56 seconds
 Difference (get(index) - iterator): 56 seconds
 
-KEY TAKEAWAY:
+Nanoseconds to seconds conversion:
 680373500 nanosecond difference is approximately 0.68 seconds for just 50,000 integers
  */
 
