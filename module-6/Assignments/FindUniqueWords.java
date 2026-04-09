@@ -14,6 +14,8 @@ import java.util.Set;
  * Reads a collection of words from a file and
  * finds the unique words, counts them, and prints them in both ascending and
  * descending order.
+ * 
+ * NOTE: I included two different test files that I used to test the program. You will need to rename each to see the test results.
  */
 public class FindUniqueWords {
 
