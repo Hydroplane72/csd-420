@@ -16,23 +16,23 @@ public class BubbleSortGenerics {
         boolean swapped;
 
         // Each outer-loop pass places the next-largest element at the end.
-        for (int i = 0; i < array.length - 1; i++) {
+        for (int outerloop = 0; outerloop < array.length - 1; outerloop++) {
             swapped = false;
 
             // The last i elements are already in final position.
-            for (int j = 0; j < array.length - 1 - i; j++) {
+            for (int innerLoop = 0; innerLoop < array.length - 1 - outerloop; innerLoop++) {
                 // Swap adjacent elements that are out of order.
-                if (array[j].compareTo(array[j + 1]) > 0) {
+                if (array[innerLoop].compareTo(array[innerLoop + 1]) > 0) {
                     // Standard adjacent swap.
-                    T temp = array[j];
-                    array[j] = array[j + 1];
-                    array[j + 1] = temp;
+                    T temp = array[innerLoop];
+                    array[innerLoop] = array[innerLoop + 1];
+                    array[innerLoop + 1] = temp;
                     // Mark that this pass changed the array.
                     swapped = true;
                 }
             }
 
-            // Stop early if the array is already sorted.
+            // Stop early if the array is sorted.
             if (!swapped) {
                 break;
             }
@@ -47,17 +47,17 @@ public class BubbleSortGenerics {
         boolean swapped;
 
         // Each outer-loop pass places the next-largest element at the end.
-        for (int i = 0; i < array.length - 1; i++) {
+        for (int outerloop = 0; outerloop < array.length - 1; outerloop++) {
             swapped = false;
 
             // The last i elements are already in final position.
-            for (int j = 0; j < array.length - 1 - i; j++) {
+            for (int innerLoop = 0; innerLoop < array.length - 1 - outerloop; innerLoop++) {
                 // Comparator decides ordering instead of natural Comparable order.
-                if (comparator.compare(array[j], array[j + 1]) > 0) {
+                if (comparator.compare(array[innerLoop], array[innerLoop + 1]) > 0) {
                     // Standard adjacent swap.
-                    T temp = array[j];
-                    array[j] = array[j + 1];
-                    array[j + 1] = temp;
+                    T temp = array[innerLoop];
+                    array[innerLoop] = array[innerLoop + 1];
+                    array[innerLoop + 1] = temp;
                     // Mark that this pass changed the array.
                     swapped = true;
                 }
