@@ -5,7 +5,7 @@
             "type": "java",
             "name": "StyledCirclesApp (Maven JavaFX)",
             "request": "launch",
-            "mainClass": "StyledCirclesApp",
+            "mainClass": "edu.csd420.StyledCirclesLauncher",
             "projectName": "styled-circles"
         }
     ]

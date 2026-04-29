@@ -1,3 +1,5 @@
+package edu.csd420;
+
 import java.util.List;
 import java.util.Objects;
 
@@ -30,7 +32,7 @@ public class StyledCirclesApp extends Application {
     }
 
     String getStylesheetUrl() {
-        return Objects.requireNonNull(getClass().getResource("mystyle.css"),
+        return Objects.requireNonNull(getClass().getResource("/mystyle.css"),
                 "Unable to find mystyle.css on the classpath")
                 .toExternalForm();
     }
